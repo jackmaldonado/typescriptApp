@@ -95,3 +95,17 @@ let myself: {name: string, bankAccount: Bank, hobbies: string[]} = {
 
 myself.bankAccount.deposit(3000);
 console.log(myself);
+
+
+
+
+
+//strictNullChecks & 
+function controlMe(isTrue: boolean){
+  let result: number;
+  if (isTrue) {
+    result = 12;
+  }
+  result = 33;
+  return result;
+}
