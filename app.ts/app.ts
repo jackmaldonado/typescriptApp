@@ -100,7 +100,7 @@ console.log(myself);
 
 
 
-//strictNullChecks & 
+//strictNullChecks &
 function controlMe(isTrue: boolean){
   let result: number;
   if (isTrue) {
@@ -109,3 +109,25 @@ function controlMe(isTrue: boolean){
   result = 33;
   return result;
 }
+
+
+
+// let & const : difference is the scope. var: is global and doesn't have a block scope. let: has the ability to change the value of variable. const: Cannot change variable.q
+
+let variable = "test";
+console.log(variable);
+variable = "another value"
+console.log(variable)
+
+const maxLevels = 100;
+console.log(maxLevels)
+
+
+// block scope: allows you to reasign variable value in the block
+function reset() {
+  let variable = null
+  console.log(variable)
+}
+// will give "another value"
+reset();
+cosole.log(varibale)
