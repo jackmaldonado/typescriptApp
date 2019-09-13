@@ -131,3 +131,63 @@ function reset() {
 // will give "another value"
 reset();
 cosole.log(varibale)
+
+
+
+// arrow functions
+
+const addNumbers = function(num1: number, num2: number): number {
+  return num1 + num2;
+};
+console.log(addNumbers(10,3));
+
+const multiplyNumbers = (num1: number, num2: number) => num1 * num2;
+console.log(multiplyNumbers(10,3));
+
+
+// arrow function variations
+
+const greet = () => {
+  console.log("Hello")
+}
+greet();
+
+const greetFriend = friend => console.log(friend);
+greetFriend("tito");
+
+// default parameters
+
+const countdown = (start: number = 10): void => {
+  while (start > 0) {
+    start--;
+  }
+  console.log("Done!", start);
+};
+countdown();
+
+
+// rest & spread parameters: allow us to work with arrays and lists of data
+
+// array of number
+const numbers = [1, 2, 26, 200, -6];
+
+// list of numbers
+console.log(Math.max(33, 29, 3, 20));
+
+// spreads array and turns into list of numbers
+console.log(Math.max(...numbers));
+
+// turns parameters into an array
+function makeArray(...args: number[]) {
+  return args;
+}
+
+console.log(makeArray(1, 2));
+
+// Rest parameters & Tuples : These two functions are the same
+function printInfo(name: string, age: number) {
+    console.log('My name is ' + name + ' and I am ' + age + ' years old!');
+}
+function printInfo(...info: [string, number]) {
+    console.log('My name is ' + info[0] + ' and I am ' + info[1] + ' years old!');
+}
